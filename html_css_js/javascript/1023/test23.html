@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+  <script>
+    function atom() {
+      var price = [500,200,700,350,400];
+      document.getElementById("demo").innerText = price;
+      document.getElementById("demoMax").innerText = myMax(price);
+      document.getElementById("demoMin").innerText = myMin(price);
+    }
+    function myMax(arr) {
+      return Math.max.apply(null, arr);
+    }
+    function myMin(arr) {
+      return Math.min.apply(null, arr);
+    }
+  </script>
+</head>
+<body>
+  <p>배열출력 <input type="button" value="출력" onclick="atom()"/></p>
+  <p id="demo"></p>
+  <br/>
+  <p id="demoMax"></p>
+  <br/>
+  <p id="demoMin"></p>
+</body>
+</html>

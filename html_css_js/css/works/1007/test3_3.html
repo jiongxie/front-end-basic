@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼</title>
+  <style>
+    #btnGroup .btn {
+      /* background-color: green; */
+      border:none;
+      padding: 10px 30px;
+      margin: 10px;
+      cursor: pointer;
+      color: white;
+    }
+    #btnGroup .btn1 {
+      background-color:red ;
+    }
+    #btnGroup .btn2 {
+      background-color:salmon ;
+    }
+    #btnGroup .btn3 {
+      background-color:yellow ;
+    }
+    #btnGroup .btn4 {
+      background-color:green ;
+    }
+    #btnGroup .btn5 {
+      background-color:blue ;
+    }
+    #btnGroup .btn6 {
+      background-color:rgb(2, 2, 92) ;
+    }
+    #btnGroup .btn7 {
+      background-color: blueviolet;
+    }
+    #btnGroup .btn:nth-child(2n+1) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #btnGroup .btn:nth-child(2n) {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    #btnGroup .btn:nth-child(2n+1):hover {
+      background-color: tomato;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #btnGroup .btn:nth-child(2n):hover {
+      background-color: wheat;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    /* 아래로 버튼그룹2 설정 */
+    #btnGroup2 .btn {
+      border: 2px solid gray;
+      padding: 10px 30px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #btnGroup2 .btn {
+      border-color: red;
+    }
+    #btnGroup2 .btn2 {
+      border-color: rosybrown;
+    }
+    #btnGroup2 .btn3 {
+      border-color: yellow;
+    }
+    #btnGroup2 .btn4 {
+      border-color: green;
+    }
+    #btnGroup2 .btn5 {
+      border-color: blue;
+    }
+    #btnGroup2 .btn6 {
+      border-color: rgb(1, 1, 66);
+    }
+    #btnGroup2 .btn7 {
+      border-color: blueviolet;
+    }
+    #btnGroup2 .btn:nth-child(2n+1):hover {
+      background-color: tomato;
+      transition-duration: 0.5s;
+    }
+    #btnGroup2 .btn:nth-child(2n):hover {
+      background-color: chocolate;
+      transition-duration: 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h2>버튼그룹</h2>
+  <div id="btnGroup">
+    <button class="btn btn1">버튼1</button>
+    <button class="btn btn2">버튼2</button>
+    <button class="btn btn3">버튼3</button>
+    <button class="btn btn4">버튼4</button>
+    <button class="btn btn5">버튼5</button>
+    <button class="btn btn6">버튼6</button>
+    <button class="btn btn7">버튼7</button>
+  </div>
+  <hr/>
+  <div id="btnGroup2">
+    <button class="btn btn1">버튼1</button>
+    <button class="btn btn2">버튼2</button>
+    <button class="btn btn3">버튼3</button>
+    <button class="btn btn4">버튼4</button>
+    <button class="btn btn5">버튼5</button>
+    <button class="btn btn6">버튼6</button>
+    <button class="btn btn7">버튼7</button>
+  </div>
+</body>
+</html>

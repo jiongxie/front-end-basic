@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼의 값 확인</title>
+  <script>
+    function myFunc() {
+      var title = myform.title.value;
+      alert("상호는 : " + title);
+    }
+
+    function myCheck() {
+      var title = myform.title.value;
+      var address = myform.address.value;
+      alert("상호 : " + title + " , 주소 : " + address);
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>폼 값 전송</h2>
+  <p>
+    상호 : <input type="text" name="title" value="드림동산" onblur="myFunc()"/>
+  </p>
+  <p>
+    주소 : <input type="text" name="address" placeholder="주소를 입력하세요." onfocus="myFunc()"/>
+  </p>
+  <p>
+    <input type="button" value="확인" onclick="myCheck()"/>
+    <input type="reset" value="취소"/>
+  </p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

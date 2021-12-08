@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 연습</title>
+  <script>
+    function myFunc() {
+      var information = {name:"홍길동",age:25,address:"서울"};
+      var res, text="";
+
+      for(res in information) {
+        text += information[res] + "<br/>";
+      }
+
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+
+</head>
+<body>
+  <h2>객체 연습</h2>
+  <p>객체 안의 값 출력</p>
+  <p>
+    <button type="button" onclick="myFunc()">출력</button>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>

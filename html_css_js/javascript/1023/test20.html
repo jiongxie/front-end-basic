@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+  <script>
+    // int[] su = {1,2,3};
+    // int[] su = new int[3];
+    function atom() {
+      var car = ["그랜져",300,"마티즈",130,"에쿠스",350,"모닝",140];
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+      document.write("<hr/>오름차순정렬<br/>");
+      car.sort();
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+      document.write("<hr/>내림차순정렬<br/>");
+      car.reverse();
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+      document.write("<hr/>뒤로추가<br/>");
+      car.push("K9"); // 추가(뒤로)
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+      document.write("<hr/>");
+      car.pop();  // 제거(뒤로)
+      car.pop();
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+      document.write("<hr/>");
+      car.shift();  // 앞쪽제거
+      for(var i=0; i<car.length; i++) {
+        document.write(car[i] + "<br/>");
+      }
+    }
+  </script>
+</head>
+<body>
+  <p>배열출력 <input type="button" value="출력" onclick="atom()"/></p>
+</body>
+</html>

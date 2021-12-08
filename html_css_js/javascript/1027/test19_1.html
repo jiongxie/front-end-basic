@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새창띄우기(자식창)</title>
+  <script>
+    function getMid() {
+      childForm.mid.value = opener.window.document.getElementById("mid").value;
+    }
+    function setMid() {
+      opener.window.document.myform.mid.value = childForm.mid.value;
+    }
+    function wClose() {
+      opener.window.document.myform.mid.value = childForm.mid.value;
+      opener.window.document.myform.pwd.focus();
+      window.close();
+    }
+  </script>
+</head>
+<body>
+<form name="childForm">
+  <p>이곳은 새창입니다.</p>
+  <p>아이디 <input type="text" name="mid"/></p>
+  <p><input type="button" value="부모창의 값 가져오기" onclick="getMid()"/></p>
+  <p><input type="button" value="부모창으로 값 보내기" onclick="setMid()"/></p>
+  <p><input type="button" value="창닫기" onclick="wClose()"/></p>
+</form>
+</body>
+</html>

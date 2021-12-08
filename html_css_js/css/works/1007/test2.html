@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입폼연습</title>
+  <style>
+    .boxform {
+      background-color: #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    input[type=text], input[type=number], input[type=sumbit], select {
+      display: inline-block;
+      width : 100%;
+      border: 1px solid #ccc;
+      padding: 12px 0 12px;
+      /* margin: 10px; */
+      margin: 10px 0;
+    }
+    input[type=text]:hover, input[type=number]:hover, input[type=sumbit]:hover, select:hover {
+      background-color: khaki;
+    }
+  </style>
+</head>
+<body>
+  <h2>회원가입</h2>
+  <div class="boxform">
+    <form>
+      <label for="name">성명</label>
+      <input type="text" name="name" id="name" placeholder="성명을 입력..."/>
+      <label for="age">나이</label>
+      <input type="number" name="age" id="age" value="20"/>
+      <label for="job">직업</label>
+      <select name="job" id="job">
+        <option value="">직업선택</option>
+        <option value="학생">학생</option>
+        <option value="회사원">회사원</option>
+        <option value="공무원">공무원</option>
+        <option value="군인">군인</option>
+        <option value="기타">기타</option>
+      </select>
+      <input type="submit" value="회원가입"/>
+    </form>
+  </div>
+</body>
+</html>

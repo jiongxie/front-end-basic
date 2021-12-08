@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그림연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      //$("#btn1").click(function() {
+      $("#btn1").mousemove(function() {
+        $("#imgDisplay").slideUp(1000);
+      });
+      $("#btn1").mouseout(function() {
+        $("#imgDisplay").slideDown(1000);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>그림 효과</h2>
+  <p>
+    <input type="button" id="btn1" value="가리기/보이기"/>
+  </p>
+  <div id="imgDisplay">
+    <img src="../images/2.jpg" width="150px"/>
+  </div>
+</body>
+</html>

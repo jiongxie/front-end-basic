@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼의 값 확인</title>
+  <script>
+    function myFunc() {
+      alert("상호는 변경할 수 없습니다.");
+      location.reload();
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>폼 값 전송</h2>
+  <p>
+    상호 : <input type="text" name="title" value="드림동산" onchange="myFunc()"/>
+    <input type="button" value="확인" onclick="myFunc()"/>
+    <input type="reset" value="취소"/>
+  </p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

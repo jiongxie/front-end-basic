@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#pwd").keyup(function() {
+        $("#demo").text("");
+      });
+      $("#pwd").blur(function() {
+        $("#demo").text("비밀번호 확인란에 입력하세요.");
+      });
+      $("#pwdre").keyup(function() {
+        if($("#pwd").val() != $("#pwdre").val()) {
+          $("#demo").text("비밀번호가 틀립니다.");
+        }
+        else {
+          $("#demo").html("<font color='red'>비밀번호가 맞습니다.</font>");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>비밀번호 확인</h2>
+  <p>
+    <lable for="pwd">비밀번호</lable> :
+    <input type="password" name="pwd" id="pwd" autofocus/>
+  </p>
+  <p>
+    <lable for="pwdre">비밀번호 확인</lable> :
+    <input type="password" name="pwdre" id="pwdre"/>
+  </p>
+  <div id="demo">암호를 입력하세요.</div>
+</form>
+</body>
+</html>

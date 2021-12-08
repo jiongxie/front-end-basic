@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery개요</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("ul").css("color","blue");
+      //$("#two").css("color","yellow");
+      //$("ul#two>li").css("color","yellow").css("background","red");
+      $("#one,#two").css("background","pink");
+    });
+  </script>
+</head>
+<body>
+  <h2>안녕하세요...</h2>
+  <ul id="one">
+    <li>First
+      <ol>
+        <li>오렌지</li>
+        <li>사과</li>
+        <li>파인애플</li>
+      </ol>
+    </li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+  <br/>
+  <h3>음식점</h3>
+  <div>
+    <ul id="two">
+      <li>중화요리</li>
+      <li>한식전문점</li>
+      <li>양식전문점</li>
+    </ul>
+  </div>
+  <div id="demo"></div>
+</body>
+</html>

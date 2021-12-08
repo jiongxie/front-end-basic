@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성변경</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#product img").attr("width","80px");
+      //$("#product img").attr({width:"80px",height:"70px"});
+      $("#product img").click(function() {
+        //$("img").removeAttr("src");
+        $(this).removeAttr("src");
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>이미지 속성 변경</h2>
+  <p><input type="button" value="그림복구" onclick="location.reload();"/></p>
+  <p>이미지를 클릭하면 그림이 제거됩니다.</p>
+  <p id="product">
+    <img src="../images/1.jpg"/>
+    <img src="../images/2.jpg"/>
+    <img src="../images/3.jpg"/>
+    <img src="../images/4.jpg"/>
+    <img src="../images/5.jpg"/>
+  </p>
+</body>
+</html>

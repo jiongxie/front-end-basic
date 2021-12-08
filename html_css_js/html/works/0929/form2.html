@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>form.html</title>
+</head>
+<body>
+<h2>폼 태그 연습</h2>
+<h2>회 원 가 입</h2>
+<form name="myform" method="get/post" action="이동할주소">
+  <table border=1 cellpadding="6">
+    <tr>
+      <td>아이디</td>
+      <td><input type="text" name="mid" autofocus/></td>
+    </tr>
+    <tr>
+      <td>비밀번호</td>
+      <td><input type="password" name="pwd"/></td>
+    </tr>
+    <tr>
+      <td>성명</td>
+      <td><input type="text" name="name"/></td>
+    </tr>
+    <tr>
+      <td>나이</td>
+      <td><input type="text" name="age" size=3 maxlength=3/></td>
+    </tr>
+    <tr>
+      <td>성별</td>
+      <td>
+        <input type="radio" name="gender" value="남자" checked>남자
+        <input type="radio" name="gender" value="여자">여자\
+      </td>
+    </tr>
+    <tr>
+      <td>취미</td>
+      <td>
+        <input type="checkbox" name="hobby" value="등산"/>등산
+        <input type="checkbox" name="hobby" value="낚시"/>낚시
+        <input type="checkbox" name="hobby" value="독서"/>독서
+        <input type="checkbox" name="hobby" value="영화감상"/>영화감상
+        <input type="checkbox" name="hobby" value="싸이클"/>싸이클
+        <input type="checkbox" name="hobby" value="바둑"/>바둑
+      </td>
+    </tr>
+    <tr>
+      <td>가보고 싶은산</td>
+      <td>
+        <select name="mnt">
+          <option value="">선택하세요</option>
+          <option value="백두산">백두산</option>
+          <option value="한라산">한라산</option>
+          <option value="태백산">태백산</option>
+          <option value="설악산">설악산</option>
+          <option value="북한산">북한산</option>
+          <option value="무등산">무등산</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>좋아하는 음식</td>
+      <td>
+        <select name="food" size="5" multiple>
+          <option value="짜장면">짜장면</option>
+          <option value="피자">피자</option>
+          <option value="찐빵">찐빵</option>
+          <option value="사과">사과</option>
+          <option value="초코렛">초코렛</option>
+          <option value="떡복기">떡복기</option>
+          <option value="떡">떡</option>
+          <option value="아이스크림">아이스크림</option>
+          <option value="불고기">불고기</option>
+          <option value="비빔밥">비빔밥</option>
+          <option value="생선튀김">생선튀김</option>
+          <option value="김밥">김밥</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>자기소개</td>
+      <td><textarea rows=5 cols=50 name="content"></textarea></td>
+    </tr>
+    <tr>
+      <td align="center">첨부파일</td>
+      <td><input type="file" name="fname"/></td>
+    </tr>
+    <tr>
+      <td  colspan=2 align="center"
+        <input type="submit" value="전송"/>
+        <input type="reset" value="취소"/>
+        <input type="button" value="체크"/>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

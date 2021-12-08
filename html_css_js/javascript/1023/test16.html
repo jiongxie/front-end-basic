@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성</title>
+  <script>
+    function txtInput() {
+      var totTxt = document.getElementById('newText').innerHTML;
+      var txt = totTxt + "<br/><input type='text' name='su'/>";
+      document.getElementById('newText').innerHTML = txt;
+    }
+</script>
+</head>
+<body>
+  <form>
+    <p>
+      <input type="button" value="입력창추가" onclick="txtInput()"/>
+    </p>
+    <p id="newText"></p>
+  </form>
+</body>
+</html>

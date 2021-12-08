@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새창 중앙에 띄우기</title>
+  <script>
+    function nWin() {
+      var url = "test17_1.html";
+      var winX = 500; // 자식창의 폭
+      var winY = 400; // 자식창의 높이
+      var x = (window.screen.width/2) - (winX/2); // 자식창이 표시될 x좌표
+      var y = (window.screen.height/2) - (winY/2); // 자식창이 표시될 y좌표
+      window.open(url,"nWin","width="+winX+", height="+winY+", left="+x+", top="+y);  // (url,새창이름,옵션)
+    }
+  </script>
+</head>
+<body>
+  <p><input type="button" value="새창" onclick="nWin()"/></p>
+</body>
+</html>

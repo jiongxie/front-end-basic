@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼의 값 확인/해제</title>
+  <script>
+    function myFunc() {
+      var cardLen = myform.card.length;
+      var str = "";
+
+      for(var i=0; i<cardLen; i++) {
+        if(myform.card[i].checked) {
+          str += myform.card[i].value + "/";
+        }
+      }
+      document.getElementById("demo").innerHTML = str;
+    }
+    function cardCheck(sel) {
+      if(sel.checked) {
+        alert("선택한 카드는? " + sel.value);
+      }
+      else {
+        alert(sel.value + " 선택을 해제하셨군요..")
+      }
+    }
+    function allCheck() {
+      var cardLen = myform.card.length;
+      for(var i=0; i<cardLen; i++) {
+        myform.card[i].checked = true;
+      }
+    }
+    function inverseCheck() {
+      var cardLen = myform.card.length;
+      for(var i=0; i<cardLen; i++) {
+        if(myform.card[i].checked)
+          myform.card[i].checked = false;
+        else
+          myform.card[i].checked = true;
+      }
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>폼 값 전송</h2>
+  <p>
+    <input type="checkbox" name="card" value="롯데카드"/>롯데카드
+    <input type="checkbox" name="card" value="삼성카드"/>삼성카드
+    <input type="checkbox" name="card" value="LG카드"/>LG카드
+    <input type="checkbox" name="card" value="농협카드"/>농협카드
+    <input type="checkbox" name="card" value="VISA카드"/>VISA카드
+    <input type="checkbox" name="card" value="BC카드"/>BC카드
+  </p>
+  <p>
+    <input type="button" value="확인" onclick="myFunc()"/>
+    <input type="button" value="전체선택" onclick="allCheck()"/>
+    <input type="button" value="선택반전" onclick="inverseCheck()"/>
+    <input type="reset" value="취소"/>
+  </p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

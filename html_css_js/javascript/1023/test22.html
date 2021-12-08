@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+  <script>
+    function atom() {
+      var car = new Array("그랜져","마티즈","에쿠스","모닝");
+      var speed = [300,150,350,200];
+      var company = ["현대","대우","현대","기아"];
+      var merge = car.concat(speed, company);
+      document.getElementById("demo").innerText = merge;
+    }
+  </script>
+</head>
+<body>
+  <p>배열출력 <input type="button" value="출력" onclick="atom()"/></p>
+  <p id="demo"></p>
+</body>
+</html>

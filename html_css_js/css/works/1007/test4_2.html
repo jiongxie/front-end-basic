@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+    }
+    ul li {
+      text-align: center;
+    }
+    ul li a {
+      display: block;
+      width : 100px;
+      background-color: #ddd;
+      padding: 8px 16px;
+      /* border: 1px solid gray; */
+      border-width: 0 1px 1px;
+      border-style: solid;
+      border-color: gray;
+      text-decoration: none;
+      color : #000;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+      background-color: #aaa;
+    }
+    ul li a:active {
+      text-decoration: overline;
+      background-color: darkcyan;
+    }
+    #homeMenu {border-top-width: 1px;}
+    .content {
+      margin-left: 150px;
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="test4_1.html" id="homeMenu">홈으로</a></li>
+    <li><a href="test4_2.html">방명록</a></li>
+    <li><a href="test4_3.html">게시판</a></li>
+    <li><a href="test4_4.html">자료실</a></li>
+    <li><a href="test4_5.html">공지사항</a></li>
+  </ul>
+  <div class="content">
+    <p>
+      <img src="../images/2.jpg"/>
+    </p>
+  </div>
+</body>
+</html>

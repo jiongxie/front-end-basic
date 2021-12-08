@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메뉴 연습</title>
+  <style>
+    ul li {
+      list-style: none;
+      float:left;
+      padding: 20px;
+      background-color: palegreen;
+    }
+    ul li:nth-child(2n+1) {    /* 짝수(2n), 홀수(2n+1) */
+      background-color: saddlebrown;
+    }
+    ul li:first-child {
+      background-color: purple;
+      border-radius: 20px 0 0 20px;
+    }
+    ul li:last-child {
+      background-color: purple;
+      border-radius: 0 20px 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>메뉴활용...</h2>
+  <ul>
+    <li><a href="#">가</a></li>
+    <li><a href="#">나</a></li>
+    <li><a href="#">다</a></li>
+    <li><a href="#">라</a></li>
+    <li><a href="#">마</a></li>
+    <li><a href="#">바</a></li>
+    <li><a href="#">사</a></li>
+    <li><a href="#">아</a></li>
+    <li><a href="#">자</a></li>
+  </ul>
+</body>
+</html>

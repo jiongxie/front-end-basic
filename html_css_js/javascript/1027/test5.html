@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메세지연습</title>
+  <script>
+    function myFunc() {
+      var res = parseInt(prompt("수를 입력하세요"));
+      if(res > 0)
+        alert("양수를 입력하셨군요!");
+      else if(res < 0)
+        alert("음수를 입력하셨군요!");
+      else if(res == 0)
+        alert("0을 입력하셨군요!");
+      else
+        alert("문자를 입력하셨군요!");
+
+      var ans = confirm("계속 하시겠습니까?");
+      //if(ans == 1) myFunc();
+      if(ans) myFunc();
+    }
+  </script>
+</head>
+<body>
+  <h2>메세지 활용</h2>
+  <p><input type="button" value="메세지" onclick="myFunc()"/></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성변경</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#product img").mouseover(function() {
+        var imgSrc = $(this).attr("src");
+        var img = "<img src='"+imgSrc+"' width='250px' height='220px'/>";
+        $("#demo").html(img);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>이미지 속성 변경</h2>
+  <p id="product">
+    <img src="../images/1.jpg" width="80" height="70"/>
+    <img src="../images/2.jpg" width="80" height="70"/>
+    <img src="../images/3.jpg" width="80" height="70"/>
+    <img src="../images/4.jpg" width="80" height="70"/>
+    <img src="../images/5.jpg" width="80" height="70"/>
+  </p>
+  <div id="demo"></div>
+</body>
+</html>

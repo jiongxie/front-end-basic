@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tes1.html</title>
+  <script>
+    function searchCheck() {
+      var fruits = ["바나나","사과","오렌지","키위"];
+      var result = fruits.indexOf("풋사과");
+      alert("출력결과? " + result);
+      document.getElementById("demo").innerHTML = "찾는 과일의 위치는? " + result;
+    }
+  </script>
+</head>
+<body>
+  <h2>함수를 이용한 자료검색(indexOf())</h2>
+  <p>찾고자 하는 문자(열)이 없을경우는 '-1'이 반환된다.</p>
+  <input type="button" value="검색" onclick="searchCheck()"/>
+  <p id="demo"></p>
+</body>
+</html>

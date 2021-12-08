@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>test3.html</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: green;
+    }
+    .aa1 {
+      font-size: 100pt;
+      border:5px solid gray;
+      background-color: skyblue;
+    }
+    .column {
+      float:left;
+      width:25%;
+      padding:10px;
+    }
+    .imgTitle {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    .imgSub {
+    	flex: 25%;
+    	flex-wrap: wrap;
+    	padding: 0 4px;
+    }
+    /* screen width < 780px (780px까지 핑크배경)*/
+    @media screen and (max-width: 780px) {
+	    body {
+	      background-color: pink;
+	    }
+	    .aa1 {
+	      font-size: 50pt;
+	      border:3px solid gray;
+	      background-color: skyblue;
+      }
+      .column {
+	      width:50%;
+	    }
+	    .imgSub {
+	    	flex: 50%;
+	    	max-width: 50%;
+	    }
+    }
+    /* screen width < 380px (480px까지 노랑배경)*/
+    @media screen and (max-width: 480px) {
+	    body {
+	      background-color: yellow;
+	    }
+	    .aa1 {
+      font-size: 10pt;
+      border:1px solid gray;
+      background-color: skyblue;
+      }
+      .column {
+	      width:100%;
+	    }
+	    .imgSub {
+	    	flex: 100%;
+	    	max-width: 100%;
+	    }
+    }
+  </style>
+</head>
+<body>
+<h2>이클립스에서 만든 html 입니다.</h2>
+<div class="imgTitle">
+  <div class="imgSub">
+    <img src="../images/1.jpg" style="width:100%">
+    <img src="../images/2.jpg" style="width:100%">
+    <img src="../images/3.jpg" style="width:100%">
+    <img src="../images/4.jpg" style="width:100%">
+    <img src="../images/5.jpg" style="width:100%">
+    <img src="../images/6.jpg" style="width:100%">
+  </div>
+  <div class="imgSub">
+    <img src="../images/7.jpg" style="width:100%">
+    <img src="../images/2.jpg" style="width:100%">
+    <img src="../images/8.jpg" style="width:100%">
+    <img src="../images/4.jpg" style="width:100%">
+    <img src="../images/9.jpg" style="width:100%">
+    <img src="../images/6.jpg" style="width:100%">
+  </div>
+  <div class="imgSub">
+    <img src="../images/10.jpg" style="width:100%">
+    <img src="../images/6.jpg" style="width:100%">
+    <img src="../images/3.jpg" style="width:100%">
+    <img src="../images/7.jpg" style="width:100%">
+    <img src="../images/5.jpg" style="width:100%">
+    <img src="../images/2.jpg" style="width:100%">
+  </div>
+  <div class="imgSub">
+    <img src="../images/9.jpg" style="width:100%">
+    <img src="../images/8.jpg" style="width:100%">
+    <img src="../images/3.jpg" style="width:100%">
+    <img src="../images/2.jpg" style="width:100%">
+    <img src="../images/5.jpg" style="width:100%">
+    <img src="../images/1.jpg" style="width:100%">
+  </div>
+</div>
+
+<div class="column" style="background-color:#aaa;">
+  <h2>데스크 탑</h2> : <p>0 ~ 1280px</p>
+</div>
+<div class="column" style="background-color:#bbb;">
+  <h2>노트북</h2> : <p>0 ~ 1024px</p>
+</div>
+<div class="column" style="background-color:#ccc;">
+  <h2>태블릿</h2> : <p>0~960px</p></div>
+<div class="column" style="background-color:#ddd;">
+  <h2>모바일</h2> : <p>0 ~576px</p>
+</div>
+<p class="aa1">이곳은 본문입니다.</p>
+</body>
+</html>

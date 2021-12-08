@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #content1 {
+      width: 800px;
+      margin: 0 auto;
+    }
+    .box {
+      width : 264px;
+      height : 150px;
+      padding : 0px;
+      margin : 0px;
+      text-align: center;
+      border : 1px solid gray;
+      background-color: tomato;
+      float : left;
+    }
+    .box:nth-child(3) {
+      background-color: violet;
+    }
+    .box4 {
+      clear: both;
+      height: 80px;
+      text-align: center;
+      background-color: yellow;
+    }
+    .box5 {
+      clear : both;
+      float:left;
+      width: 398px;
+      height: 200px;
+      text-align: center;
+      border:1px solid gray;
+      background-color: violet;
+    }
+    .box6 {
+      float:left;
+      width: 398px;
+      height: 200px;
+      text-align: center;
+      border:1px solid gray;
+      background-color: aquamarine;
+    }
+    #header, #footer {
+      clear: both;
+      text-align: center;
+      padding: 20px;
+      background-color:darkgreen;
+      font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content1">
+    <div id="header">헤더 영역입니다.</div>
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+    <div class="box4">Box4</div>
+    <div class="box5">Box5</div>
+    <div class="box6">Box6</div>
+    <div id="footer">이곳은 Footer영역입니다.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").on({
+        click: function() {
+          $("#demo").html("버튼을 누르셨군요!");
+        },
+        dblclick: function() {
+          $("#demo").html("버튼을 두번 클릭하셨습니다.");
+        },
+        mouseenter: function() {
+          $("#demo").html("버튼안으로 들어가셨군요.");
+        },
+        mouseout: function() {
+          $("#demo").html("버튼밖으로 떠나셨군요.");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <form>
+    <h2>로그인</h2>
+    <p>아이디 <input type="text" name="mid" id="mid"/></p>
+    <p>비밀번호 <input type="password" name="pwd" id="pwd"/></p>
+    <p>
+      <button type="button" id="btn1">출력</button>
+      <button type="reset" id="btn2">다시쓰기</button>
+    </p>
+  </form>
+  <p id="demo"></p>
+</body>
+</html>

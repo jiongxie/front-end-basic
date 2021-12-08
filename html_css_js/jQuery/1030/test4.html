@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>댓글 보이기 가리기</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#reply").click(function() {
+        $(this).hide();
+      });
+      $("#reShow").click(function() {
+        $("#reply").hide();
+      });
+      $("#reShow").dblclick(function() {
+        $("#reply").show();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2 id="reShow">댓글 보이기(더블클릭) 가리기(클릭)</h2>
+  <div id="reply">
+    <p>댓글1</p>
+    <p>댓글2</p>
+    <p>댓글3</p>
+    <p>댓글4</p>
+  </div>
+</body>
+</html>

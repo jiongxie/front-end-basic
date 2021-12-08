@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수연습</title>
+  <script>
+    function result() {
+      // round() : 반올림
+      document.write(Math.round(4.5) + "<br/>");
+      document.write(Math.round(-4.5) + "<br/>");
+      document.write(Math.round(4.4) + "<hr/>");
+
+      // pow() : 지수승(거듭제곱)
+      document.write(Math.pow(2,5) + "<br/>");
+      document.write(Math.pow(2,-5) + "<hr/>");
+
+      // sqrt() : 제곱근
+      document.write(Math.sqrt(16) + "<br/>");
+      document.write(Math.sqrt(125) + "<hr/>");
+
+      // abs() : 절대값
+      document.write(Math.abs(16) + "<br/>");
+      document.write(Math.abs(-16) + "<hr/>");
+
+      // ceil() : 소수이하를 올림
+      document.write(Math.ceil(4.4) + "<br/>");
+      document.write(Math.ceil(-4.4) + "<hr/>");
+
+      // floor() : 소수이하를 내림
+      document.write(Math.floor(4.6) + "<br/>");
+      document.write(Math.floor(-4.4) + "<hr/>");
+
+      // trunc() : 절삭...(버림)
+      document.write(Math.trunc(123.456) + "<br/>");
+      document.write(Math.trunc(-123.456) + "<br/>");
+
+      // random() : 0 <= x < 1  은 실수형 난수를 발생
+      // 1~10까지의 정수형 난수를 발생?
+      var res = parseInt(Math.random()*10) + 1;
+      document.write("1~10까지 정수형 난수? " + res + "<hr/>");
+
+      // pi : 3.141592.....
+      document.write("PI : " + Math.PI + "<hr/>");
+
+      // cos() : 코사인 삼각함수
+      document.write("cos(60) : " + Math.cos(60 * Math.PI/180));
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <p>수치함수
+      <input type="button" value="결과보기" onclick="result()"/>
+    </p>
+  </form>
+  <p id="demo"></p>
+</body>
+</html>

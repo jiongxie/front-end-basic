@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문(for)</title>
+  <script>
+    function myFunc() {
+      var fruits = ["사과","배","바나나","수박","참외","딸기"];
+      var text="";
+      var i=0, len=fruits.length;
+      // for(i=0, len=fruits.length, text=""; i<fruits.length; i++) {
+      for(; i<len;) {
+        text += fruits[i] + "<br/>";
+        i++;
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+</head>
+<body>
+  <h2>반복문(for~~)</h2>
+  <p>배열값 출력</p>
+  <p>
+    <button type="button" onclick="myFunc()">출력</button>
+  </p>
+  <p id="demo"></p>
+</body>
+</html>

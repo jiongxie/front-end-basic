@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function atom1() {
+      for(var i=1; i<=10; i++) {
+        document.write(i + "<br/>");
+      }
+    }
+    function atom2() {
+      var tot = 0;
+      for(var i=1; i<=100; i++) {
+        tot += i;
+      }
+      document.write("1~100까지의 합 : " + tot);
+    }
+    function atom3() {
+      for(var i=1; i<=100; i++) {
+        if((i % 5) == 0) document.write(i + "<br/>");
+      }
+    }
+    function atom4() {
+      for(var i=1; i<=100; i++) {
+        if((i % 7) == 0) {
+          document.write(i + "짝짝짝<br/>");
+        }
+        else if((i % 5) == 0) {
+          document.write(i + "짝짝<br/>");
+        }
+        else if((i % 3) == 0) {
+          document.write(i + "짝<br/>");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>반복문 연습</h2>
+  <p><input type="button" value="1~10까지 출력" onclick="atom1()"/></p>
+  <p><input type="button" value="1~100까지의 합" onclick="atom2()"/></p>
+  <p><input type="button" value="1~100까지 5의 배수만 출력" onclick="atom3()"/></p>
+  <p><input type="button" value="1~100까지 3배수(짝),5배수(짝짝),7배수(짝짝짝)" onclick="atom4()"/></p>
+</body>
+</html>

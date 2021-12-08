@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전체스크롤</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#title").mouseover(function() {
+        $("#submenu").slideDown("1000");
+      });
+      // $("#title").mouseout(function() {
+      //   $("#submenu").slideUp("500");
+      // });
+      $("#submenu").mouseout(function() {
+        $("#submenu").slideUp("500");
+      });
+    });
+  </script>
+  <style>
+    #title, #submenu {
+      background-color: cadetblue;
+      padding: 5px;
+      text-align: center;
+      border:1px solid gray;
+    }
+    #submenu {
+      padding: 50px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="title">메뉴 목록입니다.</div>
+  <div id="submenu">이곳은 <a href="">서브메뉴</a>입니다.</div>
+  <h2>이곳은 본문입니다.</h2>
+</body>
+</html>

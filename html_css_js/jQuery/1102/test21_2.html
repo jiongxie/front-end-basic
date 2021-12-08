@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동적폼</title>
+  <script>
+    var addTbl;  // 입력텍스트박스가 있는 테이블 이름을 전역변수로 설정
+    function insRow() {
+      addTbl = document.getElementById("addTable");
+      var addRow = addTbl.insertRow(); // inserRow() : addTbl테이블을 행의 개념으로 한개 추가
+      addRow.onmouseover = function() {  // clickedRowIndex : 클릭한 Row의 위치를 반환(확인)
+        addTbl.clickedRowIndex = this.rowIndex;
+      }
+      var addCell = addRow.insertCell();  // 앞에서 클릭된 행의 위치를 얻어와서, 현재 테이블의 해당행에 셀(열)로 삽입한다.
+
+      // 앞에서 삽입시켜놓은 셀에 추가될 내용은 아래와 같다.
+      var formTag = "";
+      formTag += "단가:<input type='text' name='addText1' style='width:60px; height:20px;'/> ";
+      formTag += "수량:<input type='text' name='addText2' style='width:60px; height:20px;' onblur='formCalc2()'/> ";
+      formTag += "금액:<input type='text' name='result' readonly style='width:60px; height:20px;'/> ";
+      formTag += "<input type='button' value='삭제' onclick='removeRow()'/>";
+      addCell.innerHTML = formTag;
+    }
+
+    // 추가된 행(table)을 삭제
+    function removeRow() {
+      addTbl.deleteRow(addTbl.clickedRowIndex); // clickedRowIndex : 클릭한 Row의 위치를 확인(반환)
+    }
+
+    // 입력박스의 내용이 모두 입력되었는지 체크후 전송
+    function fChcek() {
+      var myform = document.myform;
+
+      // input텍스트박스(form태그)안의 공백문자열 체크
+      for(var i=0; i<myform.elements.length; i++) {
+        if(myform.elements[i].name == "addText1") {
+          if(myform.elements[i].value == "") {
+            alert("텍스트 박스안에 상품명을 입력하세요.");
+            myform.elements[i].focus();
+            return false;
+          }
+        }
+        else if(myform.elements[i].name == "addText2") {
+          if(myform.elements[i].value == "") {
+            alert("텍스트 박스안에 상품명을 입력하세요.");
+            myform.elements[i].focus();
+            return false;
+          }
+        }
+      }
+
+      // 입력박스안의 내용이 모두 입력되었으면 처리하는 부분
+      var result = "";
+      for(var i=0; i<myform.elements.length; i++) {
+        if(myform.elements[i].name == "addText1") {
+          result += myform.elements[i].value + "*";
+        }
+        else if(myform.elements[i].name == "addText2") {
+          result += myform.elements[i].value + "=";
+          myform.elements[i+1].value = parseInt(myform.elements[i].value) * parseInt(myform.elements[i-1].value);
+          result += myform.elements[i+1].value + "\n";
+        }
+      }
+      result = result.substring(0,result.length-1);
+      alert("입력창에 입력된 상품명은? \n" + result);
+    }
+
+    function formCalc() {
+      document.myform.result.value = parseInt(myform.addText1.value) * parseInt(myform.addText2.value);
+    }
+
+    // function formCalc2() {
+    //   for(var i=0; i<myform.elements.length; i++) {
+    //     myform.elements[i+1].value = parseInt(myform.elements[i].value) * parseInt(myform.elements[i-1].value);
+    //   }
+    // }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <table>
+    <tr>
+      <td>
+        <input type="button" value="상품추가" onclick="insRow()"/>
+      </td>
+    </tr>
+    <tr>
+      <td>  <!-- 아래로 행추가(행이 테이블(id=addTable)로 추가함) -->
+        <table id="addTable" width="400px">
+          <tr>
+            <td>
+              단가:<input type="text" name="addText1" style="width:60px; height:20px; "/>
+              수량:<input type="text" name="addText2" style="width:60px; height:20px; " onblur="formCalc();"/>
+              금액:<input type="text" name="result" readonly style="width:60px; height:20px;"/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <table width="400px">
+    <tr>
+      <td style="text-align:center">
+        <input type="button" value="확인" onclick="fChcek()"/>
+        <input type="reset" value="다시입력"/>
+        <input type="button" value="초기화" onclick="location.reload()"/>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

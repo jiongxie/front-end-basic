@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <script>
+    function atom() {
+      var su1 = myform.su1.value;
+      var su2 = myform.su2.value;
+      alert("su1 + su2 =" + (su1 + su2));
+      alert("su1 + su2 =" + (parseInt(su1) + parseInt(su2)));
+    }
+    function atom2() {
+      var su3 = myform.su3.value;
+      var su4 = myform.su4.value;
+      alert("su3 + su4 =" + (su3 + su4));
+      alert("su3 + su4 =" + (parseInt(su3) + parseInt(su4)));
+    }
+  </script>
+</head>
+<body>
+  <h2>폼의 값으로 계산하기</h2>
+  <form name="myform">
+    <p>
+      수1 : <input type="text" name="su1"/>
+      수2 : <input type="text" name="su2"/>
+      <input type="button" value="수1+수2" onclick="atom()"/>
+    </p>
+    <p>
+      수3 : <input type="number" name="su3"/>
+      수4 : <input type="number" name="su4"/>
+      <input type="button" value="수3+수4" onclick="atom2()"/>
+    </p>
+  </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식연습</title>
+  <script>
+    // '^' : 시작 , '+':연속 , '$':끝
+    function myFunc() {
+      var txt = "";
+      var email = myform.email.value;
+      var check = /^\w+@\w+([\.]?\w)*(\.\w{2,3})+$/g;  // 이메일 형식체크하는 정규식
+      if(email == "") {
+        txt = "이메일 내용을 입력하세요?";
+        document.getElementById("email").focus();
+      }
+      else {
+        if(!check.test(email)) {
+          txt = "이메일 형식을 확인하세요";
+        }
+        else {
+          txt = "입력하신 이메일 주소는? " + email;
+        }
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    function myReset() {
+      myform.content.value = "";
+      document.getElementById("demo").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>정규식 연습</h2>
+  <p>전자우편 : 
+    <input type="text" name="email" size=40 autofocus/>
+  </p>
+  <p><input type="button" value="체크" onclick="myFunc()"/></p>
+  <p><input type="reset" value="취소" onclick="myReset()"/></p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

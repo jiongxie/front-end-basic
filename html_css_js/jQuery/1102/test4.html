@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성변경</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        $("#img1").attr({
+          width:"200px",
+          border:"5px",
+          title:"색연필!"
+        });
+      });
+      $("#btn2").click(function() {
+        //$("#img1").attr({
+          // src: "../images/2.jpg",
+          // width:"100px",
+          // border:"0px",
+          // title:"색연필!"
+        //});
+        location.reload();
+      });
+      $("#btn3").click(function() {
+        $("#img1").attr({
+          src: "../images/3.jpg",
+          width:"100px",
+          title:"토토로!"
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>이미지 속성 변경</h2>
+  <p>
+    <button type="button" id="btn1">크기변경</button>
+    <button type="button" id="btn2">크기복귀</button>
+    <button type="button" id="btn3">사진변경</button>
+  </p>
+  <div>
+    <img src="../images/2.jpg" id="img1" width="100"/>
+  </div>
+</body>
+</html>

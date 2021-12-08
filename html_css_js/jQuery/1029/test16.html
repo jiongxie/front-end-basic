@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#img1").hide();
+      $("#btn1").click(function() {
+        $("#atom").hide();
+        $("#img1").hide();
+      });
+      $("#btn2").click(function() {
+        $("#atom").show();
+        $("#img1").show();
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>
+    <input type="button" value="사라지기" id="btn1"/>
+    <input type="button" value="나타나기" id="btn2"/>
+  </p>
+</form>
+<div id="atom">아톰 구역입니다.</div>
+<div id="demo"><img src="../images/2.jpg" id="img1" width="150px"/></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 속성</title>
+  <style>
+    input[type=text] {
+      background-color: darkseagreen;
+      color: deeppink;
+    }
+    input[type=password] {
+      background-color: deepskyblue;
+      color: firebrick;
+      font-size: 18pt;
+    }
+    input:disabled {
+      background-color: blue;
+      color: azure;
+    }
+    img[src$=jpg] {
+      border : 5px solid red;
+    }
+  </style>
+</head>
+<body>
+  <h2>속성 선택자</h2>
+  <form>
+    <p>아이디 <input type="text" name="mid" id="mid"/></p>
+    <p>비밀번호 <input type="password" name="pwd" id="pwd"/></p>
+    <p>접속연령제한1 <input type="text" name="age" id="age" value="20" readonly/></p>
+    <p>접속연령제한2 <input type="text" name="age" id="age" value="20" disabled="disabled"/></p>
+    <p><img src="../images/2.jpg" border="10px" width="200px"/></p>
+    <p><img src="../images/3.jpg" width="200px"/></p>
+  </form>
+</body>
+</html>

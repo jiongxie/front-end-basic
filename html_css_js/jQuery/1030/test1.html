@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 체크</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--
+    입력폼 체크하시오.
+    아이디/비밀번호 체크
+    - 공백체크, 처음의 커서 위치는 '아이디에 위치할것'
+    - 아이디는 4~20이내로 작성, 비밀번호는 1~20자 이내로 작성(최대길이 설정)
+    - 아이디는 영문자와 숫자만 허용.
+    - 입력폼에 커서가 있을시는 회색(#ddd)으로 표시
+    - 입력오류시는 해당 폼에 커서를 위치시킬것.
+    - 정상 입력처리가 끝나면 'demo'에 입력된 사항을 출력
+  -->
+  <script>
+    $(function() {
+      var check = /^[0-9a-zA-Z]+$/g;
+
+      $("#mid","#pwd").focus(function() {
+        $(this).css("background-color","pink");
+      });
+      $("#mid","#pwd").blur(function() {
+        $(this).css("background-color","white");
+      });
+
+      $("#btnLogin").click(function() {
+        if($("#mid").val() == "") {
+          alert("아이디를 입력하세요");
+          $("#mid").focus();
+        }
+        else if($("#mid").val().length < 4 || $("#mid").val().length > 20) {
+          alert("아이디는 4~20자 이내로 작성하세요");
+          $("#mid").focus();
+        }
+        else if(!check.test($("#mid").val())) {
+          alert("아이디는 영문자와 숫자만 가능합니다");
+          $("#mid").focus();
+        }
+        else if($("#pwd").val() == "") {
+          alert("비밀번호를 입력하세요");
+          $("#pwd").focus();
+        }
+        else if($("#pwd").val().length < 1 || $("#pwd").val().length > 20) {
+          alert("비밀번호는 1~20자 이내로 작성하세요");
+          $("#pwd").focus();
+        }
+        else {
+          $("#demo").html("아이디 : " + $("#mid").val() + " , 비밀번호 : " + $("#pwd").val());
+        }
+      });
+
+      $("#btnReset").click(function() {
+        $("#mid").val("");
+        $("#pwd").val("");
+        $("#demo").text("");
+        $("#mid").focus();
+      });
+    });
+  </script>
+  <style>
+    body {
+      width:400px;
+      margin:0px auto;
+    }
+    table, th, td, h2 {
+      width:100%;
+      text-align: center;
+      padding: 15px;
+      border-collapse: collapse;
+    }
+    th {
+      background-color:#ddd;
+    }
+    th, td {
+      border: 1px solid gray;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<form name="myform">
+  <h2>로 그 인</h2>
+  <table>
+    <tr>
+      <th>아 이 디</th>
+      <td><input type="text" name="mid" id="mid" autofocus/></td>
+    </tr>
+    <tr>
+      <th>비밀번호</th>
+      <td><input type="password" name="pwd" id="pwd"/></td>
+    </tr>
+    <tr>
+      <td colspan=2 style="border:none;">
+        <input type="button" value="로그인" id="btnLogin"/> &nbsp; &nbsp;
+        <input type="reset" value="취소" id="btnReset"/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2 style="border:none;"><span id="demo"></span></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

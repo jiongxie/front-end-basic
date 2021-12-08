@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새창 중앙에 띄우기(부모창)</title>
+  <script>
+    function nWin() {
+      var url = "test19_1.html";
+      var winX = 500; // 자식창의 폭
+      var winY = 400; // 자식창의 높이
+      var x = (window.screen.width/2) - (winX/2); // 자식창이 표시될 x좌표
+      var y = (window.screen.height/2) - (winY/2); // 자식창이 표시될 y좌표
+      window.open(url,"nWin","width="+winX+", height="+winY+", left="+x+", top="+y);  // (url,새창이름,옵션)
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>
+    아이디 : <input type="text" name="mid" id="mid" autofocus/>
+    <input type="button" value="중복체크" onclick="nWin()"/>
+  </p>
+  <p>비밀번호 : <input type="password" name="pwd"/></p>
+  <p><input type="button" value="전송" onclick="fCheck()"/></p>
+</form>
+</body>
+</html>

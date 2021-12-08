@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        var sel = $("#su").val();
+        if(parseInt(sel) % 2 == 0) {
+          $("#demo").html("짝수");
+          $("#res").val("짝수");
+        }
+        else {
+          $("#demo").html("홀수");
+          $("#res").val("홀수");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>
+    수 <input type="text" name="su" id="su"/>
+    <input type="button" value="결과" id="btn1"/>
+  </p>
+  <p><input type="text" name="res" id="res"/></p>
+</form>
+<div id="demo"></div>
+</body>
+</html>

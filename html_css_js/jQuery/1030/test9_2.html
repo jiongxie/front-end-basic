@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        $("#item").animate({height:"200px",opacity:'0.5'},"slow");
+        $("#item").animate({width:"200px",opacity:'0.5'},"slow");
+        $("#item").animate({height:"100px",opacity:'0.5'},"slow");
+        $("#item").stop().animate({width:"100px",opacity:'1'},"slow");
+      });
+    });
+  </script>
+  <style>
+    #item {
+      background-color: chartreuse;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h2>이곳은 본문의 제목입니다.</h2>
+  <p><input type="button" id="btn1" value="이동"/></p>
+  <div id="item">이곳은 본문입니다.</div>
+</body>
+</html>

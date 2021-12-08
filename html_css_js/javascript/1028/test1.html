@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규표현식</title>
+  <script>
+    function myFunc() {
+      var txt = "";
+      var check = /abc/;  // 문자열중에서 'abc'가 있으면 true, 없으면 false
+      var content = document.getElementById("content").value;
+      if(content == "") {
+        txt = "내용을 입력하세요?";
+        document.getElementById("content").focus();
+      }
+      else {
+        if(check.test(content)) {
+          txt = "(O)abc와 일치하는 문자열이 있습니다.";
+        }
+        else {
+          txt = "(X)abc와 일치하는 문자열이 없습니다.";
+        }
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    function myReset() {
+      myform.content.value = "";
+      document.getElementById("demo").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+  <h2>정규표현식</h2>
+  <p>
+    의미 : 문자열에 특정한 규칙이 있는 경우, 해당 규칙을 식으로 정의하여
+    규칙에 맞는 문자열들을 추출할때 사용한다.
+  </p>
+<pre>
+  - 정규식은 '/ /'로 둘러싼다.
+  - 정규식의 테스트는 '정규식.test(테스트대상)'으로 실행한다.
+  - 동일한 문자를 검색하고자 한다면 '/문자 또는 문자열/'을 추가하고, 해당 문자열이 있으면 true, 없으면 false반환
+</pre> 
+<hr/>
+<form name="myform">
+  <h2>정규식 연습</h2> 
+  <p>
+    <input type="text" name="content" id="content"/>
+    <input type="button" value="정규식체크" onclick="myFunc()"/>
+    <input type="reset" value="취소" onclick="myReset()"/>
+  </p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

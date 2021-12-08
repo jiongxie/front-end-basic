@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수연습</title>
+  <script>
+    function result() {
+      var d1 = new Date();
+      document.getElementById("demo1").innerHTML = d1;
+
+      var d2 = new Date(2020, (10-1), 26);  // 0월부터 계산..
+      document.getElementById("demo2").innerHTML = d2;
+
+      // 날짜형식을 문자로 변경
+      document.getElementById("demo3").innerHTML = d1.toString();
+
+      // 날짜를 쉬운형식으로 변환
+      document.getElementById("demo4").innerHTML = d1.toDateString();
+
+      // 연도만 가져오기
+      document.getElementById("demo5").innerHTML = d1.getFullYear() + "년";
+
+      // 월만 가져오기(0월부터 계산...  예: 10월을 보려면 (10+1)로 처리함.)
+      document.getElementById("demo6").innerHTML = (d1.getMonth()+1) + "월";
+
+      // 일만 가져오기
+      document.getElementById("demo7").innerHTML = d1.getDate() + "일";
+
+      // 요일만 가져오기(0 : 일  ~  6 : 토)
+      document.getElementById("demo7").innerHTML = d1.getDay() + "요일";
+
+      // 시간만 가져오기
+      document.getElementById("demo8").innerHTML = d1.getHours() + "시";
+
+      // 분만 가져오기
+      document.getElementById("demo9").innerHTML = d1.getMinutes() + "분";
+
+      // 초만 가져오기
+      document.getElementById("demo10").innerHTML = d1.getSeconds() + "초";
+
+      // 1/1000 초 가져오기
+      document.getElementById("demo11").innerHTML = d1.getMilliseconds() + "초(1/1000)";
+
+      // 요일을 문자로 변환해서 출력하기
+      var days = ["일","월","화","수","목","금","토"];
+      document.getElementById("demo12").innerHTML = days[d1.getDay()] + "요일";
+
+      // 오늘날짜와 시간편집
+      document.getElementById("demo13").innerHTML =
+        d1.getFullYear()+"년 "+ (d1.getMonth()+1)+"월 "+ d1.getDate()+"일 " +
+        d1.getHours()+"시 "+ d1.getMinutes()+"분 "+ d1.getSeconds()+"초";
+
+      d1.setFullYear(2022,10-1,26);
+      document.getElementById("demo14").innerHTML = d1;
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <p>날짜함수
+      <input type="button" value="결과보기" onclick="result()"/>
+    </p>
+  </form>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <p id="demo12"></p>
+  <p id="demo13"></p>
+  <p id="demo14"></p>
+</body>
+</html>

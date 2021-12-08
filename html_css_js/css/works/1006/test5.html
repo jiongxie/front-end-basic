@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선(border) 속성</title>
+  <style>
+    div {margin: 20px;}
+    #a1 {
+      border-style: solid;
+      border-width: 10px;
+      border-color: blue;
+      margin: 10px;   /* margin : 바깥쪽 여백 */
+      padding : 15px; /* padding : 안쪽 여백 */
+    }
+    #a2 {
+      border : 5px solid palevioletred;
+      margin-bottom: 20px;
+      margin-right: 100px;
+      padding-top: 25px;
+      padding-left: 10px;
+    }
+    #a3 {
+      width : 300px;
+      height : 100px;
+      border : 1px solid purple;
+      background-color: salmon;
+      text-align : center;
+    }
+    #a4 {
+      width: 300px;
+      border : 1px solid blue;
+      margin : 20px;
+      padding : 20px;
+      text-align: center;
+    }
+    #a5 {
+      /* width: 300px; */
+      border : 1px solid crimson;
+      margin : 40px;
+    }
+    #sa5 {
+      border : 1px solid rgb(89, 0, 255);
+      background-color: paleturquoise;
+      margin : 40px;
+      padding : 30px 0px 20px 50px; /* '위/오른쪽/아래쪽/왼쪽' */
+    }
+    #a6 {border : 5px dotted green}
+    #a7 {border : 5px dashed green}
+    #a8 {border : 5px double green}
+    #a9 {border : 5px groove green}
+    #a10 {border : 5px ridge green}
+    #a11 {border : 5px inset green}
+    #a12 {border : 5px outset green}
+    #a13 {
+      border : 5px solid palevioletred;
+      border-radius: 10px;
+    }
+    #a14 {
+      border : 5px solid rgb(111, 58, 235);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #a15 {
+      border : 5px solid palevioletred;
+      border-bottom-left-radius: 10px;
+    }
+    #a16 {
+      border-left : 5px solid red;
+      border-bottom: 1px solid red;
+      padding : 5px;
+      font-size: 20px;
+    }
+    #box1 {
+      width: 300px;
+      height: 150px;
+      background-color: rosybrown;
+      border-width: 10px 5px;
+      border-style: solid;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="a1">1.안녕하세요</div>
+  <div id="a2">2.안녕하세요</div>
+  <div id="a3">3.안녕하세요</div>
+  <div id="a4">4.안녕하세요</div>
+  <div id="a5">5.<span id="sa5">안녕</span>하세요</div>
+  <div id="a6">6.안녕하세요</div>
+  <div id="a7">7.안녕하세요</div>
+  <div id="a8">8.안녕하세요</div>
+  <div id="a9">9.안녕하세요</div>
+  <div id="a10">10.안녕하세요</div>
+  <div id="a11">11.안녕하세요</div>
+  <div id="a12">12.안녕하세요</div>
+  <div id="a13">13.안녕하세요</div>
+  <div id="a14">14.안녕하세요</div>
+  <div id="a15">15.안녕하세요</div>
+  <div id="a16">16.안녕하세요</div>
+  <hr/>
+  <h2>박스 모델</h2>
+  <div id="box1">
+    동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세
+    무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+  </div>
+</body>
+</html>

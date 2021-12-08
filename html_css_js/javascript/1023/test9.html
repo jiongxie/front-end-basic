@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript연습</title>
+  <script>
+    function atom() {
+      var name = document.myform.name.value;
+      var age = myform.age.value;
+      
+      if(name == "") {
+        alert("이름을 입력하세요!!");
+        myform.name.focus();
+      }
+      else if(age == "") {
+        alert("나이를 입력하세요!!");
+        myform.age.focus();
+      }
+      else {
+        var ans = confirm("계속 하시겠습니까?");
+        if(ans) {
+          myform.name.value="";
+          myform.age.value="";
+          myform.name.focus();
+        }
+        else {
+          alert("입력하신 이름 : " + name + " , 나이 : " + age);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+<p>체크후 작업을 계속하려면(y/n) 입력필드의 내용을 지우고 커서 위치는 성명으로 이동..</p>
+<form name="myform">
+  <div>
+    <p>성명 : <input type="text" name="name"/></p>
+    <p>나이 : <input type="text" name="age" value="20"/></p>
+  </div>
+  <div>
+    <input type="submit" value="전송"/>
+    <input type="reset" value="취소"/>
+    <input type="button" value="체크" onclick="atom()"/>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#mid").blur(function() {
+        $("#demo").html("입력하신 아이디 : " + $("#mid").val());
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>아이디 : <input type="text" name="mid" id="mid"/></p>
+  <p>비밀번호 : <input type="password" name="pwd" id='pwd'/></p>
+  <p><input type="button" value="전송" id="btn1"/></p>
+</form>
+<div id="demo"></div>
+</body>
+</html>

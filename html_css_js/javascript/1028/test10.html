@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식연습</title>
+  <script>
+    // '^' : 시작 , '+':연속 , '$':끝
+    function myFunc() {
+      var txt = "";
+      //var check = /\d{3}/g;  // 연속된 숫자 3개이상이면 true
+      //var check = /^\d{3}$/g;  // 처음부터 연속된 숫자 3개면 true
+      //var check = /^\d{3,4}$/g;  // 처음부터 연속된 숫자 3개나 4개 면 true
+      //var check = /^\d{4}$/g;  // 처음부터 연속된 숫자 3개나 4개 면 true
+      //var check = /^\d{2,3}[-]?\d{3,4}[-]\d{4}$/g;  //형식 : 02-1234-5678
+      var check = /^\d{2,3}[\s-]?\d{3,4}[\s-]?\d{4}$/g;  //형식 : 02 1234 5678, 02-123-4567
+
+      var content = document.getElementById("content").value;
+      if(content == "") {
+        txt = "내용을 입력하세요?";
+        document.getElementById("content").focus();
+      }
+      else {
+        if(check.test(content)) {
+          txt = "(O)0~9와 일치하는 문자가 1개라도 있습니다.";
+        }
+        else {
+          txt = "(X)0~9와 일치하는 문자가 1개도 없습니다.";
+        }
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    function myReset() {
+      myform.content.value = "";
+      document.getElementById("demo").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>정규식 연습</h2>
+  <p>전화번호 : <input type="text" name="content" id="content" size=50/></p>
+  <p><input type="button" value="체크" onclick="myFunc()"/></p>
+  <p><input type="reset" value="취소" onclick="myReset()"/></p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

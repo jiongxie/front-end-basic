@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트리거연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        suUpdate($("#su1"));
+      });
+      $("#btn2").click(function() {
+        suUpdate($("#su2"));
+      });
+    });
+
+    // 값을 1씩 증가시키는 함수
+    function suUpdate(su) {
+      var num = parseInt(su.text()) + 1;
+      su.text(num);
+    }
+  </script>
+</head>
+<body>
+  <h2>트리거 연습</h2>
+  <p>
+    <input type="button" value="버튼1" id="btn1"/>
+    <input type="button" value="버튼2" id="btn2"/>
+  </p>
+  <div>
+    <span id="su1">0</span> 버튼1 제어시 숫자 증가..
+  </div>
+  <div>
+    <span id="su2">0</span> 버튼2 제어시 숫자 증가..
+  </div>
+</body>
+</html>

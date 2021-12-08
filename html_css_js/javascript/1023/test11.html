@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <script>
+    function atom(a, b, c) {
+      alert("매개변수값은? " + a + " , " + b);
+      alert("a + b = " + (a+b));
+      alert("a + c = " + (a+c));
+      alert("a + c = " + (a+parseInt(c)));
+    }
+  </script>
+</head>
+<body>
+  <h2>매개변수 연습</h2>
+  <p><input type="button" value="변수호출" onclick="atom(10,20,'30')"/></p>
+</body>
+</html>

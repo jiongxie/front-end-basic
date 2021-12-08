@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>댓글 보이기 가리기</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("div").css("color","blue");
+      $("#reply1,#reply2,#reply3").click(function() {
+        $(this).hide();
+      });
+      $("#reShow1").click(function() {
+        $("#reply1").show();
+      });
+      $("#reShow2").click(function() {
+        $("#reply2").show();
+      });
+      $("#reShow3").click(function() {
+        $("#reply3").show();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>댓글 보이기(더블클릭) 가리기(클릭)</h2>
+  <p id="reShow1">원본글1</p>
+  <div id="reply1">
+    <p>댓글1</p>
+    <p>댓글2</p>
+    <p>댓글3</p>
+    <p>댓글4</p>
+  </div>
+  <p id="reShow2">원본글2</p>
+  <div id="reply2">
+    <p>댓글1</p>
+    <p>댓글2</p>
+    <p>댓글3</p>
+    <p>댓글4</p>
+  </div>
+  <p id="reShow3">원본글3</p>
+  <div id="reply3">
+    <p>댓글1</p>
+    <p>댓글2</p>
+    <p>댓글3</p>
+    <p>댓글4</p>
+  </div>
+</body>
+</html>

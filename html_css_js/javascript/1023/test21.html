@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열</title>
+  <script>
+    function atom() {
+      var car = new Array("그랜져",300,"마티즈",130,"에쿠스",350,"모닝",140);
+      //document.getElementById("demo").innerHTML = car;
+      document.getElementById("demo").innerText = car.join(" * ");
+    }
+  </script>
+</head>
+<body>
+  <p>배열출력 <input type="button" value="출력" onclick="atom()"/></p>
+  <p id="demo"></p>
+</body>
+</html>

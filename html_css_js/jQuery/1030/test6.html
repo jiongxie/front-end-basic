@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그림연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        //$("#imgDisplay").hide(600);
+        //$("#imgDisplay").fadeOut(600);
+        //$("#imgDisplay").toggle(600);
+        if($("#imgDisplay").css("display") == "none") {
+          $("#imgDisplay").show(1000);
+        }
+        else {
+          $("#imgDisplay").fadeOut(600);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>그림 효과</h2>
+  <p>
+    <input type="button" id="btn1" value="가리기/보이기"/>
+  </p>
+  <div id="imgDisplay">
+    <img src="../images/2.jpg" width="150px"/>
+  </div>
+</body>
+</html>

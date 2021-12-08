@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // '아이디','비밀번호'를 입력하기 위해 커서가 아이디로 가면, input상자의 배경색을 pink색으로
+    // '아이디','비밀번호'를 입력후 커서가 벗어나면, input상자의 배경색을 red로..
+    $(document).ready(function() {
+      $("input").focus(function() {
+        $(this).css("background-color","pink");
+      });
+      $("input").blur(function() {
+        $(this).css("background-color","red");
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>아이디 : <input type="text" name="mid" id="mid"/></p>
+  <p>비밀번호 : <input type="password" name="pwd" id='pwd'/></p>
+  <p><input type="button" value="전송" id="btn1"/></p>
+</form>
+<div id="demo"></div>
+</body>
+</html>

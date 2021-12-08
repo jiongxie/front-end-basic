@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성연습</title>
+  <script>
+    function output() {
+      var item = "삽입되는 문서입니다.";
+      document.getElementById('demo2').innerText = item;
+    }
+    function output2() {
+      var item1 = document.getElementById('demo2').innerHTML;
+      var item2 = item1 + "<br/>추가로 삽입되는 문서입니다.";
+      document.getElementById('demo2').innerHTML = item2;
+    }
+    function erase() {
+      document.getElementById('demo2').innerText = "";
+    }
+  </script>
+</head>
+<body>
+  <h2>글자 속성 변경</h2>
+  <button type="button"
+    onclick="document.getElementById('demo').style.fontSize='32px'">글꼴32px(2em)</button>
+  <button type="button"
+    onclick="document.getElementById('demo').style.fontSize='16px'">글꼴16px(1em)</button>
+  <button type="button"
+    onclick="document.getElementById('demo').style.display='none'">감추기</button>
+  <button type="button"
+    onclick="document.getElementById('demo').style.display='block'">보이기</button>
+  <p>
+    <button type="button" onclick="output()">출력</button>
+    <button type="button" onclick="output2()">추가출력</button>
+    <button type="button" onclick="erase()">지우기</button>
+  </p>
+  <p id="demo">자바스크립트로 글자 크기를 변경해 봅니다.</p>
+  <p id="demo2"></p>
+</body>
+</html>

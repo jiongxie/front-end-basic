@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록태그속성</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      // $("#menu").css("color","blue");
+      // $("#menu li:even").css("color","blue");
+      // $("#menu li:odd").css("color","red");
+      // $("#menu li:first").css("color","orange");
+      // $("#menu li:last").css("color","#0f0");
+      $("#menu").css("color","blue");
+      $("#menu li:eq(5)").css("color","red");
+      $("#menu li:lt(2)").css("color","yellow");
+      $("#menu li:gt(7)").css("color","brown");
+    });
+  </script>
+</head>
+<body>
+  <h2>목록태그 연습</h2>
+  <ul id="menu">
+    <li>연습1(0)</li>
+    <li>연습2(1)</li>
+    <li>연습3(2)</li>
+    <li>연습4(3)</li>
+    <li>연습5(4)</li>
+    <li>연습6(5)</li>
+    <li>연습7(6)</li>
+    <li>연습8(7)</li>
+    <li>연습9(8)</li>
+    <li>연습10(9)</li>
+  </ul>
+  <h2>이곳은 본문입니다.</h2>
+</body>
+</html>

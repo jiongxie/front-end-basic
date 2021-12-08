@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼의 값 확인</title>
+  <script>
+    function myFunc() {
+      var fruit = myform.fruit.value;
+      if(fruit == "") {
+        alert("과일을 선택하세요!");
+      }
+      else {
+        document.getElementById("demo").innerHTML = "선택하신 과일은 : " + fruit;
+      }
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>폼 값 전송</h2>
+  <p>
+    <select name="fruit" onchange="myFunc()">
+      <option value="">선택하세요</option>
+      <option value="사과">사과</option>
+      <option value="배">배</option>
+      <option value="바나나">바나나</option>
+      <option value="수박">수박</option>
+      <option value="토마토">토마토</option>
+      <option value="참외">참외</option>
+      <option value="키위">키위</option>
+    </select>
+  </p>
+  <p>
+    <input type="button" value="확인" onclick="myFunc()"/>
+    <input type="reset" value="취소"/>
+  </p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

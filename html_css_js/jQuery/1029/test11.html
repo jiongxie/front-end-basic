@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var mid = $("#mid").val();
+      var pwd = $("#pwd").val();
+      $("#demo1").html(mid);
+      $("#demo2").html(pwd);
+      $("input[type='button']").val("안녕");
+      $("#btn2").val("로그인");
+      $("#btn2").click(function() {
+        var mid = $("#mid").val();
+        var pwd = $("#pwd").val();
+        if(mid == "") {
+          alert("아이디를 입력하세요");
+          $("#mid").focus();
+        }
+        else if(pwd == "") {
+          alert("비밀번호를 입력하세요");
+          $("#pwd").focus();
+        }
+        else {
+          $("#demo3").html(mid+" : "+pwd);
+        }
+      });
+    });
+
+    function resetCheck() {
+      document.myform.mid.value = "";
+      document.myform.pwd.value = "";
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>아이디 : <input type="text" name="mid" id="mid" value="홍길동"/></p>
+  <p>비밀번호 : <input type="password" name="pwd" id="pwd" value="1234"/></p>
+  <p><input type="button"/></p>
+  <p><input type="button" id="btn2"/></p>
+  <p><input type="button" value="취소" onclick="resetCheck()"/></p>
+</form>
+<div id="demo1"></div>
+<div id="demo2"></div>
+<div id="demo3"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식연습</title>
+  <script>
+    // '^' : 시작 , '+':연속 , '$':끝
+    function myFunc() {
+      var txt = "";
+//      var check = /^[a-z]+$/g;   // 영문 소문자만 허용
+//      var check = /^[A-Z]+$/g;   // 영문 대문자만 허용
+//      var check = /^[a-zA-Z]+$/g;   // 영문 대,소문자만 허용
+//      var check = /^[0-9a-zA-Z]+$/g;   // 숫자,영문 대,소문자만 허용
+//      var check = /^[가-힣]+$/g;   // 한글만 허용
+//      var check = /[\s]+/g;   // 공백의 유(true),무(false)..
+//      var check = /a.c/g;  // '.'연산자 : abc, acc, adc, a!c, a5c (a와 c중 중간에 1개문자만 모두 허용)
+//      var check = /ab?c/g;  // '?'연산자 : a와c중간의 ?표는 ?표 앞의 문자(b)를 0개나 1개만 허용함.
+      var check = /ab*c/g;  // '*'연산자 : a와c중간의 *표는 ?표 앞의 문자(b)를 0개 이상 허용함.
+      var content = document.getElementById("content").value;
+      if(content == "") {
+        txt = "내용을 입력하세요?";
+        document.getElementById("content").focus();
+      }
+      else {
+        if(check.test(content)) {
+          txt = "(O)0~9와 일치하는 문자가 1개라도 있습니다.";
+        }
+        else {
+          txt = "(X)0~9와 일치하는 문자가 1개도 없습니다.";
+        }
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    function myReset() {
+      myform.content.value = "";
+      document.getElementById("demo").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>정규식 연습</h2>
+  <p><input type="text" name="content" id="content" size=50/></p>
+  <p><input type="button" value="체크" onclick="myFunc()"/></p>
+  <p><input type="reset" value="취소" onclick="myReset()"/></p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

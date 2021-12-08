@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script> 
+    $(function(){
+      $("#btnAdd").on("click", function(){ 
+        var newRow = $("#formList>li:last").clone(); 
+        newRow.insertAfter($("#formList>li:last"));
+        return false; 
+      });
+      $("#formList>li>#btnDelete").on("click", function(){ 
+        $(this).parent().remove();
+        return false; 
+      });
+    }); 
+  </script>
+</head>
+<body>
+  <p>
+    <ul class="form_list">
+        <li><a href="#" id="btnAdd" class="btn btn_add">추가</a></li>
+    </ul>
+  </p>
+  <p>
+    <ul id="formList" class="form_list">
+      <li>내용<a href="#" id="btnDelete" class="btn btn_del">삭제</a></li>
+    </ul>
+  </p>
+</body>
+</html>

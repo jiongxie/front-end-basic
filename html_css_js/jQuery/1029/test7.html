@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery개요</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#demo1").text("1.안녕 하세요");
+      $("#demo2").text("2.안녕 하세요");
+      $("#demo3").text("3.안녕 하세요");
+      $(".aa").css("color","skyblue");
+      $(".bb").css("background-color","yellow");
+    });
+  </script>
+</head>
+<body>
+  <h2>안녕하세요...</h2>
+  <p>반갑습니다.</p>
+  <div>jQuery연습1 입니다.</div>
+  <div class="aa">jQuery연습2 입니다.</div>
+  <div class="bb">jQuery연습3 입니다.</div>
+  <div class="aa">jQuery연습4 입니다.</div>
+  <div class="bb">jQuery연습5 입니다.</div>
+  <div id="demo1"></div>
+  <div id="demo2" class="aa bb"></div>
+  <div id="demo3" class="bb"></div>
+</body>
+</html>

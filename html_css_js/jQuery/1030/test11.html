@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var sw = 0;
+      $("#btn1").click(function() {
+        if(sw == 0) {
+          $(".box2").prepend("[앞쪽으로 문자 추가] "); // 기존문자 앞쪽에 추가
+          sw = 1;
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>요소의 추가/삭제</h2>
+  <p>
+    <input type="button" value="추가" id="btn1"/>
+  </p>
+  <p>문장1</p>
+  <p class="box2">문장2</p>
+  <p>문장3</p>
+</body>
+</html>

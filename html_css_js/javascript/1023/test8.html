@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript연습6</title>
+  <script>
+    function atom() {
+      var name = document.myform.name.value;
+      var age = myform.age.value;
+      
+      if(name == "") {
+        alet("이름을 입력하세요!!");
+        myform.name.focus();
+      }
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <div>
+    <p>성명 : <input type="text" name="name"/></p>
+    <p>나이 : <input type="text" name="age" value="20"/></p>
+  </div>
+  <div>
+    <input type="submit" value="전송"/>
+    <input type="reset" value="취소"/>
+    <input type="button" value="체크" onclick="atom()"/>
+  </div>
+</form>
+</body>
+</html>

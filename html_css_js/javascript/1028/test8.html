@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정규식연습</title>
+  <script>
+    // '^' : 시작 , '+':연속 , '$':끝
+    function myFunc() {
+      var txt = "";
+      var check = /img src=/g;  // 'img src='만 있으면 허용'
+      var check = /img\s*src\s*=/g; // 앞의 문법중 공백이 여러개 있어도 허용.
+      var content = document.getElementById("content").value;
+      if(content == "") {
+        txt = "내용을 입력하세요?";
+        document.getElementById("content").focus();
+      }
+      else {
+        if(check.test(content)) {
+          txt = "(O)0~9와 일치하는 문자가 1개라도 있습니다.";
+        }
+        else {
+          txt = "(X)0~9와 일치하는 문자가 1개도 없습니다.";
+        }
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+    function myReset() {
+      myform.content.value = "";
+      document.getElementById("demo").innerHTML = "";
+    }
+  </script>
+</head>
+<body>
+<form name="myform">
+  <h2>정규식 연습</h2>
+  <p><input type="text" name="content" id="content" size=50/></p>
+  <p><input type="button" value="체크" onclick="myFunc()"/></p>
+  <p><input type="reset" value="취소" onclick="myReset()"/></p>
+  <p id="demo"></p>
+</form>
+</body>
+</html>

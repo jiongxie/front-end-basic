@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼태그 연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#btn1").click(function() {
+        $("#mbc").hide();
+        $("#img1").hide();
+      });
+      $("#btn1").dblclick(function() {
+        $("#mbc").show();
+        $("#img1").show();
+      });
+      $("#atom").mouseenter(function() {
+        $("#demo2").html("아톰안으로 진입~~");
+      });
+      $("#atom").mouseout(function() {
+        $("#demo2").html("아톰영역을 벗어납니다.");
+      });
+      $("#atom").mousedown(function() {
+        $("#demo2").html("");
+      });
+      $("#atom").mouseup(function() {
+        $("#demo2").html("안녕~~");
+      });
+    });
+  </script>
+</head>
+<body>
+<form name="myform">
+  <p>
+    <input type="button" value="사라지기/보이기" id="btn1"/>
+  </p>
+</form>
+<div id="mbc"><span id="atom">아톰</span> 구역입니다.</div>
+<div id="demo"><img src="../images/2.jpg" id="img1" width="150px"/></div>
+<div id="demo2"></div>
+<div id="demo3"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").click(function() {
+        $(".box2").prepend("[앞쪽으로 문자 추가] "); // 기존문자 앞쪽에 추가
+      });
+      $("#btn2").click(function() {
+        $(".box2").append("[뒤쪽으로 문자 추가] "); // 기존문자 뒤쪽에 추가
+      });
+      $("#btn3").click(function() {
+        $(".box2").before("[위쪽으로 문자 추가] "); // 기존문자 위쪽에 추가
+      });
+      $("#btn4").click(function() {
+        $(".box2").after("[위쪽으로 문자 추가] "); // 기존문자 위쪽에 추가
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>요소의 추가/삭제</h2>
+  <p>
+    <input type="button" value="앞으로추가" id="btn1"/>
+    <input type="button" value="뒤로추가" id="btn2"/>
+    <input type="button" value="위로추가" id="btn3"/>
+    <input type="button" value="아래로추가" id="btn4"/>
+  </p>
+  <p>문장1</p>
+  <p class="box2">문장2</p>
+  <p>문장3</p>
+</body>
+</html>

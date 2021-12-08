@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체연습</title>
+  <script>
+    function personCreate(name,age,height,weight) {
+      this.name = name;
+      this.age = age;
+      this.height = height;
+      this.weight = weight;
+    }
+
+    function myFunc() {
+      var person1 = new personCreate("홍길동",25,175,73);
+      var person2 = new personCreate("김말숙",22,160,58);
+
+      alert("객체 생성 완료!!!");
+
+      var str = "성명 : " + person1.name + " / ";
+      str += "나이 : " + person1.age  + " / ";
+      str += "키 : " + person1.height  + " / ";
+      str += "몸무게 : " + person1.weight;
+      document.getElementById("demo1").innerHTML = str;
+
+      var str = "성명 : " + person2.name + " / ";
+      str += "나이 : " + person2.age  + " / ";
+      str += "키 : " + person2.height  + " / ";
+      str += "몸무게 : " + person2.weight;
+      document.getElementById("demo2").innerHTML = str;
+    }
+  </script>
+</head>
+<body>
+  <h2>객체 연습</h2>
+  <p><button type="button" onclick="myFunc()">출력</button></p>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+</body>
+</html>

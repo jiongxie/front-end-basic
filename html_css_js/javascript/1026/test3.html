@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수연습</title>
+  <script>
+    function result() {
+      //var str = document.myform.str.value;
+      var str = document.getElementById("str").value;
+
+      //alert("문자열 : " + str);
+
+      document.write("입력값 : " + str + "<br/>");
+      
+      // indexOf(문자열) : 지정된 문자열에 특정 문자값(문자열)이 존재하는지 검색하여 위치값을 반환(없으면 -1을 반환)
+      document.write("(indexOf) Home 문자의 위치? " + str.indexOf("Home") + "<br/>");
+      document.write("(indexOf) H 문자의 위치? " + str.indexOf("H") + "<br/>");
+      document.write("(indexOf) o 문자의 위치? " + str.indexOf("o") + "<br/>");
+
+      // lastIndexOf(문자열) : 찾고자 하는 문자(열)을 뒤쪽부터 검색하여 인덱스 위치를 반환한다.
+      document.write("(lastIndexOf) H 문자의 위치? " + str.lastIndexOf("H") + "<br/>");
+      document.write("(lastIndexOf) h 문자의 위치? " + str.lastIndexOf("h") + "<br/>");
+      document.write("(lastIndexOf) 공백 문자의 위치? " + str.lastIndexOf(" ") + "<br/>");
+      document.write("(lastIndexOf) o 문자의 위치? " + str.lastIndexOf("o") + "<br/>");
+
+      // charAt(인덱스번호) : 특정 인덱스에 위치한 1개의 문자를 반환한다.
+      document.write("(charAt)인덱스 4번째 위치문자? " + str.charAt(4) + "<br/>");
+
+      // match(문자열) : 검색하는 문자(열)이 존재하면 값을 찾아서 반환해준다.
+      document.write("(match) 'Home'과 일치하는 문자? " + str.match("Home") + "<br/>");
+
+      //  search(문자열) : 지정된 문자열에 특정 문자값(문자열)이 존재하는지 검색하여 위치값을 반환(없으면 -1을 반환)
+      document.write("(search) 'Home'과 일치하는 문자? " + str.search("Home") + "<br/>");
+
+      // substr(출력할 시작인덱스, 발췌할 문자수) : 시작인덱스번호부터 지정한 문자를 반환한다.
+      document.write("(substr) 14번째 문자값부터 4글자만 추출? " + str.substr(14,4) + "<br/>");
+
+      // substring(출력할 시작인덱스, (출력할 시작인덱스+발췌할 문자수)) : 
+      document.write("(substring) 14번째 문자값부터 4글자만 추출? " + str.substring(14,18) + "<br/>");
+
+      // replace("찾을문자열","치환할문자열")
+      document.write("(replace) 'My'를 'You'로 변경하시오? " + str.replace("My","You") + "<br/>");
+      document.write("(replace) 'Om'를 'um'로 변경하시오? " + str.replace("Om","um") + "<br/>");
+      document.write("(replace) 'om'를 'um'로 변경하시오? " + str.replace("om","um") + "<br/>");
+      document.write("(replaceAll) 'om'를 'um'로 변경하시오? " + str.replaceAll("om","um") + "<br/>");
+      document.write("(replaceAll) '공백'을 '_'로 변경하시오? " + str.replaceAll(" ","_") + "<br/>");
+      
+      // toUpperCase(문자열) : 대문자로 변경
+      document.write("(toUpperCase) str변수의 문자열을 대문자로 변경? " + str.toUpperCase() + "<br/>");
+      
+      // toLowerCase(문자열) : 대문자로 변경
+      document.write("(toLowerCase) str변수의 문자열을 소문자로 변경? " + str.toLowerCase() + "<br/>");
+
+      // split(특정문자값) : 특정 문자를 기준으로 분리시킨후 배열로 저장한다.
+      document.write("(split) str변수의 값을 공백을 기준으로 각각 분리시켜 출력? <br/>" );
+      var strArr = str.split(" ");
+      for(var i=0; i<strArr.length; i++) {
+        document.write((i+1) + " : " + strArr[i] + "<br/>");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="myform">
+    <p>문자열
+      <input type="text" name="str" id="str" value="Welcome to My Homepage!">
+      <input type="button" value="결과보기" onclick="result()"/>
+    </p>
+  </form>
+</body>
+</html>
