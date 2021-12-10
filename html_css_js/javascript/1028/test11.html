@@ -9,7 +9,8 @@
     function myFunc() {
       var txt = "";
 //      var check = /^(02|043)-(\d{3}|\d{4})-\d{4}$/g;   //형식 : (서울(02)/충북(043))
-      var check = /^(010)-(\d{3}|\d{4})-\d{4}$/g;   //형식 : (핸드폰(010)만 허용)
+//var check = /^(010)-(\d{3}|\d{4})-\d{4}$/g;   //형식 : (핸드폰(010)만 허용)
+var check = /^(\d{3}|\d{4})-\d{4}$/g;   //형식 : (핸드폰(010)만 허용)
 
       var content = document.getElementById("content").value;
       if(content == "") {
@@ -18,10 +19,10 @@
       }
       else {
         if(check.test(content)) {
-          txt = "(O)0~9와 일치하는 문자가 1개라도 있습니다.";
+          txt = "(O)형식에 맞습니다.";
         }
         else {
-          txt = "(X)0~9와 일치하는 문자가 1개도 없습니다.";
+          txt = "(X)형식에 맞지 않습니다.";
         }
       }
       document.getElementById("demo").innerHTML = txt;
@@ -35,7 +36,8 @@
 <body>
 <form name="myform">
   <h2>정규식 연습</h2>
-  <p>전화번호 : <input type="text" name="content" id="content" size=50/></p>
+  <p>전화번호 : 010-<input type="text" name="content" id="content" size=50/></p>
+  <p>-넣어주세요</p>
   <p><input type="button" value="체크" onclick="myFunc()"/></p>
   <p><input type="reset" value="취소" onclick="myReset()"/></p>
   <p id="demo"></p>
