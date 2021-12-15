@@ -10,10 +10,17 @@
       //document.getElementById("demo").innerHTML = car;
       document.getElementById("demo").innerText = car.join(" * ");
     }
+
+    function atom2() {
+      var home = new Array("아파트", 50000, "오피스텔", 30000, "단독주택", 40000, "원룸", 10000);
+      document.getElementById("demo2").innerText = home.join("-");
+    }
   </script>
 </head>
 <body>
   <p>배열출력 <input type="button" value="출력" onclick="atom()"/></p>
+  <p>배열출력 <input type="button" value="출력" onclick="atom2()"/></p>
   <p id="demo"></p>
+  <p id="demo2"></p>
 </body>
 </html>

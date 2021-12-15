@@ -7,8 +7,8 @@
   <script>
     function myFunc() {
       var txt = "";
-      var check = /abc/;  // 문자열중에서 'abc'가 있으면 true, 없으면 false
-      var content = document.getElementById("content").value;
+      var check = /abc/;  // 문자열중에서 'abc'가 있으면 true, 없으면 false 
+      var content = document.getElementById("content").value; 
       if(content == "") {
         txt = "내용을 입력하세요?";
         document.getElementById("content").focus();
@@ -21,7 +21,7 @@
           txt = "(X)abc와 일치하는 문자열이 없습니다.";
         }
       }
-      document.getElementById("demo").innerHTML = txt;
+      document.getElementById("demo").innerHTML = txt;   
     }
     function myReset() {
       myform.content.value = "";

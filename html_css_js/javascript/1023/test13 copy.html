@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function atom3() {
+      for(var i=1; i<100; i++) {
+        if((i % 7) == 0) {
+          document.write(i + "짝짝짝<br/>");
+        }
+        else if((i % 5) == 0) {
+          document.write(i + "짝짝<br/>");
+        }
+        else if((i % 3) == 0) {
+          document.write(i + "짝<br/>")
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>반복문 연습</h2>
+  <p><input type="button" value="1~100까지 3배수(짝), 5배수(짝짝), 7배수(짝짝짝)" onclick="atom3()"/></p>
+</body>
+</html>

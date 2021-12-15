@@ -19,14 +19,14 @@
         document.getElementById("content").focus();
       }
       else {
-        if(check.test(content)) {
-          txt = "(O)0~9와 일치하는 문자가 1개라도 있습니다.";
+        if(check.test(content)) {            
+          txt = "(O)처음부터 연속된 숫자 3개나 4개 입니다.";
         }
         else {
-          txt = "(X)0~9와 일치하는 문자가 1개도 없습니다.";
+          txt = "(X)처음부터 연속된 숫자 3개나 4개가 아닙니다.";
         }
       }
-      document.getElementById("demo").innerHTML = txt;
+      document.getElementById("demo").innerHTML = txt;  // document.getElementById("demo").innerHTML = txt;
     }
     function myReset() {
       myform.content.value = "";
