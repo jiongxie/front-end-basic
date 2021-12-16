@@ -6,11 +6,11 @@
   <title>test18.html</title>
   <script>
     function calc() {
-      var su1 = parseInt(document.getElementById('su1').value);
+      var su1 = parseInt(document.getElementById('su1').value);  // var su1 = parseInt(document.getElementById('su1').value);
       var su2 = parseInt(document.getElementById('su2').value);
-      var res1 = su1 % su2;
+      var res1 = su1 % su2;  // var res1 = su1 % su2;
       //var res2 = su1 ** su2;
-      var res2 = Math.pow(su1, su2);
+      var res2 = Math.pow(su1, su2); // var res2 = Math.pow(su1, su2);
       document.getElementById("output1").innerHTML = "<h3>나머지 : " + res1 + "</h3>";
       document.getElementById("output2").innerHTML = "<h3>거듭제곱 : " + res2 + "</h3>";
     }
