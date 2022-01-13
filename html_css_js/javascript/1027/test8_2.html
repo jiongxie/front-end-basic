@@ -9,13 +9,33 @@
       var cardLen = myform.card.length;
       var str = "";
 
+      for(var i=0; i<cardLen; i++) {  // 마지막 항목뒤에 슬래쉬 없애기
+        if(myform.card[i].checked) {
+          if(myform.card[i+1]) {
+           str += myform.card[i].value + "/";
+          }
+          else {
+            str += myform.card[i].value;
+          }
+        }
+      }
+      document.getElementById("demo").innerHTML = str;
+    }
+
+    /*
+    function myFunc() {
+      var cardLen = myform.card.length;
+      var str = "";
+
       for(var i=0; i<cardLen; i++) {
         if(myform.card[i].checked) {
           str += myform.card[i].value + "/";
         }
       }
       document.getElementById("demo").innerHTML = str;
+
     }
+    */
     function cardCheck(sel) {
       if(sel.checked) {
         alert("선택한 카드는? " + sel.value);
@@ -30,6 +50,15 @@
         myform.card[i].checked = true;
       }
     }
+    /*
+    function allCheck() {
+      var cardLen = myform.card.length;
+      for(var i=0; i<cardLen; i++) {
+        myform.card[i].checked = true;
+      }
+    }
+    */
+
     function inverseCheck() {
       var cardLen = myform.card.length;
       for(var i=0; i<cardLen; i++) {
@@ -39,6 +68,19 @@
           myform.card[i].checked = true;
       }
     }
+
+    /*
+    function inverseCheck() {
+      var cardLen = myform.card.length;
+      for(var i=0; i<cardLen; i++) {
+        if(myform.card[i].checked)
+          myform.card[i].checked = false;
+        else 
+          myform.card[i].checked = true;
+      }
+    }
+    */
+
   </script>
 </head>
 <body>
